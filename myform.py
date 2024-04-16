@@ -20,7 +20,7 @@ def my_form():
         return "Not all fields filled"
     if not re.fullmatch(REGEX, mail):
         return "Invalid mail"
-    questions[mail] = quest
+    questions[mail] = [username, quest]
     pdb.set_trace()
 
     return f'''Thanks, {username}! The answer will be sent to the mail {mail}
