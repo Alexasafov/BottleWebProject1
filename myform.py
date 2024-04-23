@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 import os
 
-REGEX = r'\b[A-Za-z0-9._%+-]+@+[A-Z|a-z]+[A-Za-z0-9.-]+\.[A-Z|a-z]{2,7}\b'
+REGEX = r"^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
 WRITEPATH = 'questions.json'
 
 def add_if_not_exist(list, el):
@@ -44,4 +44,3 @@ def my_form():
 
     return f'''Thanks, {username}! The answer will be sent to the mail {mail}
             Access Date: {date_time}'''
-        
